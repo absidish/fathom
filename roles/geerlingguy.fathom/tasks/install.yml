@@ -17,6 +17,7 @@
     src: "{{ fathom_binary_url }}"
     dest: /tmp/fathom
     remote_src: true
+    validate_certs: no
   register: archive_contents
   when: >
     not fathom_bin.stat.exists
